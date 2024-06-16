@@ -8,7 +8,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 const limiter = rateLimit({
 	windowMs: 1 * 60 * 1000, //2 minutes
-	limit: 3, // Limit each IP to 3 requests per `window` (here, per 15 minutes).
+	limit: 15, // Limit each IP to 3 requests per `window` (here, per 15 minutes).
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
